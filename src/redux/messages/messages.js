@@ -6,7 +6,7 @@ const GET_MSG = 'get-messages';
 // Action Thunk
 export const retrieveMessages = createAsyncThunk(GET_MSG, async () => {
   const res = await fetch('http://127.0.0.1:3000/api/v1/messages');
-  const message  = await res.json();
+  const message = await res.json();
   return message;
 });
 
